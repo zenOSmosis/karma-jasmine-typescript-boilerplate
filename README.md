@@ -8,6 +8,8 @@
 
 Executes the same unit tests against the same code on a browser as well as Node.js.
 
+Includes built-in support for WebKit, Chrome, and Firefox.
+
 This repository serves as a proof-of-concept and nothing more.
 
 Portions of this were borrowed from:
