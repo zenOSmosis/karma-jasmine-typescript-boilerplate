@@ -29,10 +29,11 @@
     "karma-coverage": "^2.2.0",
     "karma-firefox-launcher": "^2.1.2",
     "karma-jasmine": "^5.1.0",
-    "karma-safari-launcher": "^1.0.0",
     "karma-typescript": "^5.5.3",
     "karma-verbose-reporter": "^0.0.8",
+    "karma-webkit-launcher": "^1.1.0",
     "nyc": "^15.1.0",
+    "playwright": "^1.27.1",
     "prettier": "^2.5.1",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4"
