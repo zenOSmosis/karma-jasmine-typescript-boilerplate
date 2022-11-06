@@ -1,4 +1,8 @@
-![CI](https://github.com/zenosmosis/karma-jasmine-typescript-boilerplate/actions/workflows/ci.yml/badge.svg)
+[![ci][ci-image]][ci-url]
+
+[ci-image]: https://github.com/zenosmosis/karma-jasmine-typescript-boilerplate/actions/workflows/ci.yml/badge.svg
+[ci-url]: https://github.com/zenOSmosis/karma-jasmine-typescript-boilerplate/actions/workflows/ci.yml
+
 
 # karma-jasmine-typescript-boilerplate
 
