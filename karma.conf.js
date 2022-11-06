@@ -23,6 +23,6 @@ module.exports = function (config) {
     },
     reporters: ["coverage", "verbose", "karma-typescript"],
 
-    browsers: ["ChromeHeadless"],
+    browsers: ["ChromeHeadless", "FirefoxHeadless"],
   });
 };
