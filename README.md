@@ -1,3 +1,5 @@
+![CI](https://github.com/zenosmosis/karma-jasmine-typescript-boilerplate/actions/workflows/ci.yml/badge.svg)
+
 # karma-jasmine-typescript-boilerplate
 
 Executes the same unit tests against the same code on a browser as well as Node.js.
