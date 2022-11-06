@@ -15,7 +15,7 @@ module.exports = function (config) {
       bundlerOptions: {
         sourceMap: true,
       },
-      exclude: ["example", "dist"],
+      exclude: ["dist"],
       include: ["test", "src"],
     },
     preprocessors: {
