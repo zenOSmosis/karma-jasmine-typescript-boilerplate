@@ -4,7 +4,7 @@ module.exports = function (config) {
     files: [{ pattern: "test/**/*.ts" }, { pattern: "src/**/*.ts" }],
     // @see https://npm.io/package/karma-typescript
     karmaTypescriptConfig: {
-      // tsconfig: "./tsconfig.json",
+      tsconfig: "./tsconfig.json",
       compilerOptions: {
         sourceMap: true,
       },
