@@ -16,6 +16,7 @@ Portions of this were borrowed from:
 
 - https://github.com/piecioshka/boilerplate-jasmine-typescript (for Node.js configuration)
 - https://github.com/monounity/karma-typescript/tree/master/packages/karma-typescript (for Karma / browser configuration)
+- https://github.com/google/karma-webkit-launcher (for helping fix flaky Safari tests)
 
 
 ## Running Tests
