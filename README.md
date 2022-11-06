@@ -1,4 +1,4 @@
-![CI](https://github.com/github/docs/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/zenosmosis/karma-jasmine-typescript-boilerplate/actions/workflows/ci.yml/badge.svg)
 
 # karma-jasmine-typescript-boilerplate
 
