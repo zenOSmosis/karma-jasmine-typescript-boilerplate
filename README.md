@@ -16,9 +16,35 @@ Portions of this were borrowed from:
 - https://github.com/monounity/karma-typescript/tree/master/packages/karma-typescript (for Karma / browser configuration)
 
 
+## Running Tests
+
+Note, the default configuration runs the same tests across the environments you choose.
+
+**Browser and Node tests:**
+
+```sh
+$ npm run test
+```
+
+**Browser-only tests:**
+
+```sh
+$ npm run test:browser
+```
+
+**Node-only tests:**
+
+```sh
+$ npm run test:node
+```
+
 ## Configuration
 
-To modify the configuration, modify the relevant file(s) for your environment(s):
+To update the configuration, modify the relevant file(s) for your environment(s):
 
-- Node.js: jasmine.node.json
-- Browser: karma.conf.js
+- Node.js: [jasmine.node.json](jasmine.node.json)
+- Browser: [karma.conf.js](karma.conf.js)
+
+## License
+
+[MIT](LICENSE) / Copyright (c) 2022 zenOSmosis and any respective third parties
