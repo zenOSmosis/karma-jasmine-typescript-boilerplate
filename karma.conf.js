@@ -29,6 +29,6 @@ module.exports = function (config) {
     },
     reporters: ["coverage", "verbose", "karma-typescript"],
 
-    browsers: ["ChromeHeadless", "FirefoxHeadless", "WebkitHeadless"],
+    browsers: ["ChromeHeadless", "FirefoxHeadless" /* "WebkitHeadless" */],
   });
 };
