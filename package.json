@@ -14,8 +14,7 @@
     "build": "tsc",
     "test:browser": "karma start --single-run",
     "test:browser:watch": "karma start --auto-watch",
-    "test:node": "jasmine --reporter=jasmine-console-reporter --config=jasmine.node.json",
-    "test:node:coverage": "nyc npm run test:node && nyc report --reporter=html",
+    "test:node": "nyc --reporter=html jasmine --reporter=jasmine-console-reporter --config=jasmine.node.json",
     "test": "npm run test:node && npm run test:browser"
   },
   "devDependencies": {
