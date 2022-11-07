@@ -18,7 +18,23 @@ The goals of this project are to execute the testing code directly in the indivi
 
 This use case might not be suitable for all projects but makes it better suited for code that is intended to run across all environments: i.e. algorithms, custom WebSocket implementations, etc.
 
-Take a look at the [included tests](test) for an example.
+So tests like the following can run regardless of which environment they are in, w/o needing to be eval-ed through a web driver message request.
+
+```js
+import {fibonacci, isBrowser} from "../src/index";
+
+describe("basic tests", () => {
+  it("determines if running in browser", () => {
+    expect(isBrowser()).toBe(typeof window !== undefined);
+  });
+
+  it("generates fibonacci", () => {
+    expect(fibonacci(10)).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
+  });
+});
+```
+
+Take a look at the [included tests](test) for more examples.
 
 More information is below regarding [additional considerations for Jest](#misc).
 
