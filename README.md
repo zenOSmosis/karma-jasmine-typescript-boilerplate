@@ -12,6 +12,8 @@ Includes built-in support for running in real browsers such as WebKit, Chrome, a
 
 This repository serves as a proof-of-concept and nothing more.
 
+![Logo with Example](/assets/banner.jpg) 
+
 ## Why not Playwright, Jest, or...?
 
 *Ubiquity: Test code in multiple environments without duplicating test cases or using multiple runners.*
