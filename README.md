@@ -89,13 +89,15 @@ Portions of this were borrowed from:
 - https://github.com/google/karma-webkit-launcher (for helping fix flaky Safari tests)
 - https://www.freecodecamp.org/news/jasmine-unit-testing-tutorial-4e757c2cbf42/ (for helping w/ Jasmine tests)
 
-## Misc
+## Misc / Roadmap
 
 As much as I'd like to try to get Jest to work instead (for running tests in a browser as well), here's a thread that indicates it may be a bit difficult to accomplish: https://github.com/facebook/jest/issues/139
 
 This post shows some polyfills to sort of fake it: https://github.com/tom-sherman/blog/blob/main/posts/02-running-jest-tests-in-a-browser.md
 
 Playwright was also added as a dependency to help locate the WebKit bin path on the host system (see: [Headless Webkit with Playwright](https://github.com/google/karma-webkit-launcher#usage)).
+
+In the future I'd like to add configuration options for [BrowserStack](https://www.browserstack.com/) and potentially [Sauce Labs](https://saucelabs.com/).
 
 ## License
 
