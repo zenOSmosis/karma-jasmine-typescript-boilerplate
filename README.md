@@ -6,23 +6,15 @@
 
 # karma-jasmine-typescript-boilerplate (+ Istanbul & Sinon)
 
-Executes the same unit tests against the same code on a browser as well as Node.js.
+Test TypeScript code in real browsers and Node.js.
 
-Includes built-in support for running in real browsers such as WebKit, Chrome, and Firefox.
+Designed for code that is intended to run across all environments: i.e. algorithms, custom WebSocket implementations, etc.
 
-This repository serves as a proof-of-concept and nothing more.
+Includes built-in support for Node.js, WebKit (i.e. Safari), Chrome, and Firefox.
 
-![Logo with Example](/assets/banner.jpg) 
+Don't just assume your code will run in all browsers as well as Node.js; prove it with test results.
 
-## Why not Playwright, Jest, or...?
-
-*Ubiquity: Test code in multiple environments without duplicating test cases or using multiple runners.*
-
-The goals of this project are to execute the testing code directly in the individual environments w/o using a web driver.  This way, the same tests can execute across all major browsers as well as Node.js.
-
-This use case might not be suitable for all projects but makes it better suited for code that is intended to run across all environments: i.e. algorithms, custom WebSocket implementations, etc.
-
-So tests like the following can run regardless of which environment they are in, w/o needing to be eval-ed through a web driver message request.
+Write once; test anywhere.
 
 ```js
 import {fibonacci, isBrowser} from "../src/index";
@@ -35,6 +27,35 @@ describe("basic tests", () => {
   it("generates fibonacci", () => {
     expect(fibonacci(10)).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
   });
+});
+```
+
+
+![Logo with Example](/assets/banner.jpg) 
+
+## Why not Playwright, Jest, or...?
+
+If developing code that can run in a browser as well as Node.js, it is important to be able to unit test in the same environments the code is designed to run in.
+
+Playwright doesn't give you the ability to run unit tests directly in Node.js, and JavaScript can only be evaluated on the client like:
+
+```js
+const result = await page.evaluate(data => {
+  window.myApp.use(data);
+}, data);
+```
+
+Jest, on the other hand, can execute unit tests in Node.js and you can polyfill browser APIs but you don't get the guaranteed results of how that code will execute in various browsers.
+
+### How this project is different
+
+When run in a browser environment, the imported modules in the test code are transpiled to run directly in the browser, so you can test individual modules the same way as you test them in Node.js.
+
+This code runs the same regardless of running in Node.js or the browser.
+
+```js
+it("determines if running in browser", () => {
+  expect(isBrowser()).toBe(typeof window !== undefined);
 });
 ```
 
