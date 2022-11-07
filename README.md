@@ -14,9 +14,9 @@ This repository serves as a proof-of-concept and nothing more.
 
 ## Why not Playwright, Jest, or...?
 
-*Ubiquity: The same code runs everywhere.*
+*Ubiquity: Test code in multiple environments without duplicating test cases or using multiple runners.*
 
-The goals of this project are to execute the testing code directly in the individual environments w/o using a web driver.  This way, the same tests can execute across all environments, including Node.js.
+The goals of this project are to execute the testing code directly in the individual environments w/o using a web driver.  This way, the same tests can execute across all major browsers as well as Node.js.
 
 This use case might not be suitable for all projects but makes it better suited for code that is intended to run across all environments: i.e. algorithms, custom WebSocket implementations, etc.
 
@@ -36,7 +36,7 @@ describe("basic tests", () => {
 });
 ```
 
-Take a look at the [included tests](test) for more examples.
+Take a look at the [included tests](test) for more examples as well as the [example CI pipeline](.github/workflows/ci.yml).
 
 More information is below regarding [additional considerations for Jest](#misc).
 
