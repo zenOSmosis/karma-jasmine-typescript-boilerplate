@@ -4,7 +4,7 @@
 [ci-url]: https://github.com/zenOSmosis/karma-jasmine-typescript-boilerplate/actions/workflows/ci.yml
 
 
-# karma-jasmine-typescript-boilerplate (+ Instanbul & Sinon)
+# karma-jasmine-typescript-boilerplate (+ Istanbul & Sinon)
 
 Executes the same unit tests against the same code on a browser as well as Node.js.
 
@@ -66,7 +66,7 @@ $ npm run test:node
 
 ## Test Coverage Reporting
 
-Code coverage is provided by [Instanbul](https://github.com/istanbuljs).
+Code coverage is provided by [Istanbul](https://github.com/istanbuljs).
 
 Default settings are as follows:
 
