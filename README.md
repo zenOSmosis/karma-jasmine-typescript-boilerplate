@@ -89,10 +89,9 @@ $ npm run test:node
 
 Code coverage is provided by [Istanbul](https://github.com/istanbuljs).
 
-Default settings are as follows:
+By default, code coverage is enabled and HTML reports are available in {root}/coverage.
 
-  - Browser code coverage is generated automatically and placed in {root}/coverage as HTML files
-  - Node.js test coverage reports are placed in .nyc_output as JSON files
+![Code Coverage Directory Structure](/assets/coverage-directory-structure.png) 
 
 ## Configuration
 
