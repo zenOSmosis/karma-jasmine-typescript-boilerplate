@@ -4,15 +4,17 @@
 [ci-url]: https://github.com/zenOSmosis/karma-jasmine-typescript-boilerplate/actions/workflows/ci.yml
 
 
-# karma-jasmine-typescript-boilerplate
+# karma-jasmine-typescript-boilerplate (+ Instanbul & Sinon)
 
 Executes the same unit tests against the same code on a browser as well as Node.js.
 
-Includes built-in support for WebKit, Chrome, and Firefox.
+Includes built-in support for running in real browsers such as WebKit, Chrome, and Firefox.
 
 This repository serves as a proof-of-concept and nothing more.
 
 ## Why not Playwright, Jest, or...?
+
+*Ubiquity: The same code runs everywhere.*
 
 The goals of this project are to execute the testing code directly in the individual environments w/o using a web driver.  This way, the same tests can execute across all environments, including Node.js.
 
@@ -90,6 +92,8 @@ Portions of this were borrowed from:
 As much as I'd like to try to get Jest to work instead (for running tests in a browser as well), here's a thread that indicates it may be a bit difficult to accomplish: https://github.com/facebook/jest/issues/139
 
 This post shows some polyfills to sort of fake it: https://github.com/tom-sherman/blog/blob/main/posts/02-running-jest-tests-in-a-browser.md
+
+Playwright was also added as a dependency to help locate the WebKit bin path on the host system (see: [Headless Webkit with Playwright](https://github.com/google/karma-webkit-launcher#usage)).
 
 ## License
 
