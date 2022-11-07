@@ -12,6 +12,16 @@ Includes built-in support for WebKit, Chrome, and Firefox.
 
 This repository serves as a proof-of-concept and nothing more.
 
+## Why not Playwright, Jest, or...?
+
+The goals of this project are to execute the testing code directly in the individual environments w/o using a web driver.  This way, the same tests can execute across all environments, including Node.js.
+
+This use case might not be suitable for all projects but makes it better suited for code that is intended to run across all environments: i.e. algorithms, custom WebSocket implementations, etc.
+
+Take a look at the [included tests](test) for an example.
+
+More information is below regarding [additional considerations for Jest](#misc).
+
 ## Running Tests
 
 Note, the default configuration runs the same tests across the environments you choose.
