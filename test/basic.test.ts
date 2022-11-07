@@ -30,4 +30,8 @@ describe("basic tests", () => {
   it("generates fibonacci", () => {
     expect(utils.fibonacci(10)).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
   });
+
+  it("determines if running in browser", () => {
+    expect(utils.isBrowser()).toBe(typeof window !== undefined);
+  });
 });
