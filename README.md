@@ -12,13 +12,6 @@ Includes built-in support for WebKit, Chrome, and Firefox.
 
 This repository serves as a proof-of-concept and nothing more.
 
-Portions of this were borrowed from:
-
-- https://github.com/piecioshka/boilerplate-jasmine-typescript (for Node.js configuration)
-- https://github.com/monounity/karma-typescript/tree/master/packages/karma-typescript (for Karma / browser configuration)
-- https://github.com/google/karma-webkit-launcher (for helping fix flaky Safari tests)
-
-
 ## Running Tests
 
 Note, the default configuration runs the same tests across the environments you choose.
@@ -47,6 +40,16 @@ To update the configuration, modify the relevant file(s) for your environment(s)
 
 - Node.js: [jasmine.node.json](jasmine.node.json)
 - Browser: [karma.conf.js](karma.conf.js)
+
+## Some Credits
+
+Portions of this were borrowed from:
+
+- https://github.com/piecioshka/boilerplate-jasmine-typescript (for Node.js configuration)
+- https://github.com/monounity/karma-typescript/tree/master/packages/karma-typescript (for Karma / browser configuration)
+- https://github.com/google/karma-webkit-launcher (for helping fix flaky Safari tests)
+- https://www.freecodecamp.org/news/jasmine-unit-testing-tutorial-4e757c2cbf42/ (for helping w/ Jasmine tests)
+
 
 ## License
 

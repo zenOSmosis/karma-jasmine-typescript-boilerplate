@@ -1,8 +1,17 @@
-export enum MockEnum {
-  MockVal1 = "mock-val-1",
-  MockVal2 = "mock-val-2",
+export function fibonacci(n: number): number[] {
+  if (n === 1) {
+    return [0, 1];
+  } else {
+    const s = fibonacci(n - 1);
+    s.push(s[s.length - 1] + s[s.length - 2]);
+    return s;
+  }
 }
 
-export default function mockUtility() {
-  return MockEnum.MockVal1;
+export function toUpperCase(str: string) {
+  return str.toUpperCase();
+}
+
+export function getTime() {
+  return new Date().getTime();
 }
