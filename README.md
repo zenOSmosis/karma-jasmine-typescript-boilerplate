@@ -4,13 +4,43 @@
 [ci-url]: https://github.com/zenOSmosis/karma-jasmine-typescript-boilerplate/actions/workflows/ci.yml
 
 
-# karma-jasmine-typescript-boilerplate
+# karma-jasmine-typescript-boilerplate (+ Instanbul & Sinon)
 
 Executes the same unit tests against the same code on a browser as well as Node.js.
 
-Includes built-in support for WebKit, Chrome, and Firefox.
+Includes built-in support for running in real browsers such as WebKit, Chrome, and Firefox.
 
 This repository serves as a proof-of-concept and nothing more.
+
+![Logo with Example](/assets/banner.jpg) 
+
+## Why not Playwright, Jest, or...?
+
+*Ubiquity: Test code in multiple environments without duplicating test cases or using multiple runners.*
+
+The goals of this project are to execute the testing code directly in the individual environments w/o using a web driver.  This way, the same tests can execute across all major browsers as well as Node.js.
+
+This use case might not be suitable for all projects but makes it better suited for code that is intended to run across all environments: i.e. algorithms, custom WebSocket implementations, etc.
+
+So tests like the following can run regardless of which environment they are in, w/o needing to be eval-ed through a web driver message request.
+
+```js
+import {fibonacci, isBrowser} from "../src/index";
+
+describe("basic tests", () => {
+  it("determines if running in browser", () => {
+    expect(isBrowser()).toBe(typeof window !== undefined);
+  });
+
+  it("generates fibonacci", () => {
+    expect(fibonacci(10)).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
+  });
+});
+```
+
+Take a look at the [included tests](test) for more examples as well as the [example CI pipeline](.github/workflows/ci.yml).
+
+More information is below regarding [additional considerations for Jest](#misc).
 
 ## Running Tests
 
@@ -34,6 +64,15 @@ $ npm run test:browser
 $ npm run test:node
 ```
 
+## Test Coverage Reporting
+
+Code coverage is provided by (Instanbul)[https://github.com/istanbuljs].
+
+Default settings are as follows:
+
+  - Browser code coverage is generated automatically and placed in {root}/coverage as HTML files
+  - Node.js test coverage reports are placed in .nyc_output as JSON files
+
 ## Configuration
 
 To update the configuration, modify the relevant file(s) for your environment(s):
@@ -55,6 +94,8 @@ Portions of this were borrowed from:
 As much as I'd like to try to get Jest to work instead (for running tests in a browser as well), here's a thread that indicates it may be a bit difficult to accomplish: https://github.com/facebook/jest/issues/139
 
 This post shows some polyfills to sort of fake it: https://github.com/tom-sherman/blog/blob/main/posts/02-running-jest-tests-in-a-browser.md
+
+Playwright was also added as a dependency to help locate the WebKit bin path on the host system (see: [Headless Webkit with Playwright](https://github.com/google/karma-webkit-launcher#usage)).
 
 ## License
 
