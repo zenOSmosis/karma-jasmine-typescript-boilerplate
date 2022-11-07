@@ -66,7 +66,7 @@ $ npm run test:node
 
 ## Test Coverage Reporting
 
-Code coverage is provided by (Instanbul)[https://github.com/istanbuljs].
+Code coverage is provided by [Instanbul](https://github.com/istanbuljs).
 
 Default settings are as follows:
 
