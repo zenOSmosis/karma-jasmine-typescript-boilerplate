@@ -15,3 +15,9 @@ export function toUpperCase(str: string) {
 export function getTime() {
   return new Date().getTime();
 }
+
+export function isBrowser() {
+  // Note: This isn't a great test; it would be skewed if polyfilled or running
+  // in a web / service worker, etc.
+  return typeof window !== undefined;
+}
