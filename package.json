@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@types/jest": "^29.2.1",
+    "@types/sinon": "^10.0.13",
     "expect": "^29.2.2",
     "jasmine": "^4.5.0",
     "jasmine-console-reporter": "^3.1.0",
@@ -29,6 +30,7 @@
     "karma-coverage": "^2.2.0",
     "karma-firefox-launcher": "^2.1.2",
     "karma-jasmine": "^5.1.0",
+    "karma-jasmine-sinon": "^1.0.4",
     "karma-typescript": "^5.5.3",
     "karma-verbose-reporter": "^0.0.8",
     "karma-webkit-launcher": "^1.1.0",

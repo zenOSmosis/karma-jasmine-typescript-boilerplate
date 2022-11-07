@@ -6,7 +6,7 @@ process.env.WEBKIT_BIN = process.env.WEBKIT_HEADLESS_BIN =
 
 module.exports = function (config) {
   config.set({
-    frameworks: ["jasmine", "karma-typescript"],
+    frameworks: ["jasmine", "jasmine-sinon", "karma-typescript"],
     files: [{ pattern: "test/**/*.ts" }, { pattern: "src/**/*.ts" }],
     // @see https://npm.io/package/karma-typescript
     karmaTypescriptConfig: {
