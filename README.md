@@ -119,6 +119,14 @@ Playwright was also added as a dependency to help locate the WebKit bin path on 
 
 In the future I'd like to add configuration options for [BrowserStack](https://www.browserstack.com/) and potentially [Sauce Labs](https://saucelabs.com/).
 
+## Troubleshooting
+
+Playwright tests are not automatically cleaning up after themselves.  If you're on a Unix-type system (i.e. Mac or Linux) try running the following:
+
+```sh
+$ sudo killall Playwright
+```
+
 ## License
 
 [MIT](LICENSE) / Copyright (c) 2022 zenOSmosis and any respective third parties
