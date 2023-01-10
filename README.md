@@ -121,7 +121,7 @@ In the future I'd like to add configuration options for [BrowserStack](https://w
 
 ## Troubleshooting
 
-Playwright tests are not automatically cleaning up after themselves.  If you're on a Unix-type system (i.e. Mac or Linux) try running the following:
+If Playwright tests happen to not automatically clean up after themselves and you're on a Unix-type system (i.e. Mac or Linux) try running the following:
 
 ```sh
 $ sudo killall Playwright
