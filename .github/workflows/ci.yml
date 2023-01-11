@@ -5,7 +5,7 @@ name: ci
 jobs:
   test:
     name: Node ${{ matrix.node }}
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     environment: ci
     strategy:
       fail-fast: false
