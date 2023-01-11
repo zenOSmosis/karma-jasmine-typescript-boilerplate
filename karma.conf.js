@@ -30,5 +30,6 @@ module.exports = function (config) {
     reporters: ["coverage", "verbose", "karma-typescript"],
 
     browsers: ["ChromeHeadless", "FirefoxHeadless", "WebkitHeadless"],
+    // browsers: ["Chrome", "Firefox", "Webkit"],
   });
 };
