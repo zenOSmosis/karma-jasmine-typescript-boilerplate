@@ -25,10 +25,14 @@ module.exports = function (config) {
       include: ["test", "src"],
     },
     preprocessors: {
-      "**/*.ts": ["karma-typescript", "coverage"],
+      "**/*.ts": ["karma-typescript"],
+      "src/**/*.ts": ["coverage"],
     },
     reporters: ["coverage", "verbose", "karma-typescript"],
-
+    coverageReporter: {
+      type: "text",
+    },
     browsers: ["ChromeHeadless", "FirefoxHeadless", "WebkitHeadless"],
+    // browsers: ["Chrome", "Firefox", "Webkit"],
   });
 };
